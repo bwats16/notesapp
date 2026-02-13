@@ -51,5 +51,6 @@ struct AddEditNoteView: View {
 }
 
 #Preview {
-  
+  let viewModel = NotesViewModel()
+    AddEditNoteView(viewModel: viewModel, noteToEdit: nil)
 }

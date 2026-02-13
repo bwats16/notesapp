@@ -57,5 +57,6 @@ struct NoteDetailView: View {
 }
 
 #Preview {
-    
+  let viewModel = NotesViewModel()
+    let sampleNote = Note (id: UUID(), title: "Test Note ", isCompleted: false, content: "This is a test note")
 }

@@ -17,7 +17,7 @@ struct ContentView: View {
                     NavigationLink {
                         NoteDetailView(viewModel: viewModel, note: note)
                     } label: {
-                        VStack(alignment: .leading, spacing: 6) {
+                        VStack(alignment: .leading, spacing: 5) {
                             HStack {
                                 Text(note.title.isEmpty ? "Untitled" : note.title)
                                     .font(.headline)
@@ -58,6 +58,8 @@ struct ContentView: View {
     }
 }
 #Preview {
-  
-   
+    let testmodel = NotesViewModel()
+    let previewNote = Note(id: UUID(), title: "Note 1", isCompleted: false, content: "This is a test note.")
+    testmodel.notes = [previewNote]
+    return ContentView(viewModel: testmodel)
 }
