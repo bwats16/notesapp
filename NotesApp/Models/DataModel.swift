@@ -8,14 +8,15 @@
 import Foundation
 
 struct Note: Codable, Identifiable {
-    var id = UUID()
+    let id: UUID
     var title: String
     var isCompleted: Bool
     var content: String
     
-    init(title: String, isCompleted: Bool = false, details: String = "") {
+    init(id: UUID = UUID(), title: String, isCompleted: Bool = false, content: String = "") {
+        self.id = id
         self.title = title
         self.isCompleted = isCompleted
-        self.content = details
+        self.content = content
     }
 }
